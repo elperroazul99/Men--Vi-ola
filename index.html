@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Zuleida&Viñola - Carta Digital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="cuerpo-pagina">
+  <header>Casa Zuleida&Viñola</header>
+
+  <div class="gallery">
+    <img src="logo.png" alt="Logo Izquierdo">
+    <img src="logo.png" id="img-dinamica" alt="Decoración Dinámica">
+  </div>
+
+  <div class="botones">
+    <button class="btn-bar" onclick="mostrarSeccion('seccion-bar')">Bar</button>
+    <button class="btn-cocina" onclick="toggleSubmenu()">Cocina</button>
+  </div>
+
+  <div id="submenu-cocina" class="submenu">
+    <button onclick="mostrarSeccion('seccion-home')" class="btn-home-sub">🏠 INICIO (Ofertas)</button>
+    <button onclick="mostrarSeccion('seccion-cocina-principal')">Plato Principal</button>
+    <button onclick="mostrarSeccion('seccion-cocina-ligera')">Comida Ligera</button>
+    <button onclick="mostrarSeccion('seccion-cocina-postres')">Postres</button>
+  </div>
+
+  <main id="contenedor-menu">
+    
+    <section id="seccion-home" class="menu-pagina active">
+      <div class="cargando" style="text-align: center; padding: 20px;">Cargando menú...</div>
+    </section>
+
+    <section id="seccion-cocina-principal" class="menu-pagina"></section>
+
+    <section id="seccion-cocina-ligera" class="menu-pagina"></section>
+
+    <section id="seccion-cocina-postres" class="menu-pagina"></section>
+
+    <section id="seccion-bar" class="menu-pagina"></section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
